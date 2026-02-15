@@ -60,7 +60,7 @@ def query_api():
         return jsonify({
             "answer": cache[key],
             "cached": True,
-            "latency" = max(1, int((time.time() - start) * 1000)),
+            "latency" : max(1, int((time.time() - start) * 1000)),
             "cacheKey": key
         })
 
@@ -71,7 +71,7 @@ def query_api():
             return jsonify({
                 "answer": entry["answer"],
                 "cached": True,
-                "latency" = max(1, int((time.time() - start) * 1000)),
+                "latency" : max(1, int((time.time() - start) * 1000)),
                 "cacheKey": "semantic"
             })
 
@@ -89,7 +89,7 @@ def query_api():
     return jsonify({
         "answer": answer,
         "cached": False,
-        "latency" = max(1, int((time.time() - start) * 1000)),
+        "latency" : max(1, int((time.time() - start) * 1000)),
         "cacheKey": key
     })
 
