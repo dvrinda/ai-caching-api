@@ -90,6 +90,13 @@ def query_api():
         "cacheKey": key
     })
 
+
+@app.route("/", methods=["GET"])
+def home():
+    return {
+        "message": "Caching API is running. Use POST / for queries and GET /analytics for metrics."
+    }
+
 # -----------------------------
 # Analytics API
 # -----------------------------
