@@ -38,7 +38,7 @@ def simple_similarity(a, b):
     return len(a_set & b_set) / max(1, len(a_set | b_set))
 
 def call_llm(query):
-    time.sleep(1)  # simulate slow AI call
+    time.sleep(0.8)  # simulate slow AI call
     return f"Summary of document for query: {query}"
 
 # -----------------------------
